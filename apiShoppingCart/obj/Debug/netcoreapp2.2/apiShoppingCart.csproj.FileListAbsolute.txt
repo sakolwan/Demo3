@@ -1,0 +1,14 @@
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\obj\Debug\netcoreapp2.2\apiShoppingCart.csprojAssemblyReference.cache
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\obj\Debug\netcoreapp2.2\apiShoppingCart.csproj.CoreCompileInputs.cache
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\obj\Debug\netcoreapp2.2\apiShoppingCart.RazorAssemblyInfo.cache
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\obj\Debug\netcoreapp2.2\apiShoppingCart.RazorAssemblyInfo.cs
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\obj\Debug\netcoreapp2.2\apiShoppingCart.AssemblyInfoInputs.cache
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\obj\Debug\netcoreapp2.2\apiShoppingCart.AssemblyInfo.cs
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\bin\Debug\netcoreapp2.2\apiShoppingCart.deps.json
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\bin\Debug\netcoreapp2.2\apiShoppingCart.runtimeconfig.json
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\bin\Debug\netcoreapp2.2\apiShoppingCart.runtimeconfig.dev.json
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\bin\Debug\netcoreapp2.2\apiShoppingCart.dll
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\bin\Debug\netcoreapp2.2\apiShoppingCart.pdb
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\obj\Debug\netcoreapp2.2\apiShoppingCart.RazorTargetAssemblyInfo.cache
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\obj\Debug\netcoreapp2.2\apiShoppingCart.dll
+C:\Users\acer\Desktop\Demo3\apiShoppingCart\obj\Debug\netcoreapp2.2\apiShoppingCart.pdb

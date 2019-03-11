@@ -50,7 +50,7 @@ namespace apiShoppingCart.Controllers
         }
 
         [HttpPost]
-        public void CreateProduct([FromBody]Product newProduct)
+        public void PostProduct([FromBody]Product newProduct)
         {
             newProduct.Id = Guid.NewGuid().ToString();
             Product.Add(newProduct);

@@ -1,8 +1,12 @@
+<!--
+  Generated template for the ManageProductPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
   <ion-navbar color="blue1">
-    <ion-title>
-      รายการสินค้า
-    </ion-title>
+    <ion-title>จัดการรายการสินค้า</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -20,7 +24,7 @@
     </ion-card-header>
 
     <ion-card-content>
-      <form >
+      <form>
         <ion-item *ngFor="let p of product">
           <ion-row>
             <ion-col col-9>
@@ -37,7 +41,16 @@
 </ion-content>
 
 <ion-footer>
-  <button ion-button block color="blue1" (click)="goManagePage()">
-    จัดการรายการสินค้า
-  </button>
+  <ion-row>
+    <ion-col col-6>
+      <ion-buttons>
+        <button ion-button block color="danger">ลบรายการ</button>
+      </ion-buttons>
+    </ion-col>
+    <ion-col col-6>
+      <ion-buttons>
+        <button ion-button block color="secondary">แก้ไขข้อมูล</button>
+      </ion-buttons>
+    </ion-col>
+  </ion-row>
 </ion-footer>

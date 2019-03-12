@@ -1,0 +1,29 @@
+<!--
+  Generated template for the PostProductPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="blue1">
+    <ion-title>เพิ่มสินค้า</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="newProduct" (ngSubmit)="postProduct()">
+    <ion-item>
+      <ion-label fixed>ชื่อสินค้า</ion-label>
+      <ion-input type="text" formControlName="productName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>ราคา</ion-label>
+      <ion-input type="number" formControlName="price"></ion-input>
+    </ion-item>
+
+    <div padding>
+      <button ion-button block type="submit" [disabled]="newProduct.invalid" color="secondary">เพิ่มรายการ</button>
+    </div>
+  </form>
+</ion-content>

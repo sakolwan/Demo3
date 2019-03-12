@@ -32,4 +32,22 @@ export class ManageProductPage {
       //แสดงรายการสินค้า
     })
   }
+
+  postProduct() 
+  {
+    this.navCtrl.push('PostProductPage');
+  }
+
+  // deleteProduct(id : string) 
+  // {
+  //   // Delete Product
+  //   this.callApi.DeleteProduct(id).subscribe(data => {
+  //     this.getAll();
+  //   })
+  // }
+
+  infoManagePage(id : string)
+  {
+    this.navCtrl.push('InfoManagePage',{id:id});
+  }
 }

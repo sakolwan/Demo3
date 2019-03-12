@@ -32,7 +32,7 @@ namespace apiShoppingCart.Controllers
         [HttpPost]
         public void PostCart([FromBody]ShoppingCart newCart)
         {
-            newCart.Id = Guid.NewGuid().ToString();
+            // newCart.Id = Guid.NewGuid().ToString();
             ShoppingCart.Add(newCart);
         }
 

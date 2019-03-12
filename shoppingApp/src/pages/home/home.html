@@ -1,8 +1,14 @@
 <ion-header>
-  <ion-navbar color="blue1">
+  <ion-navbar color="blue1" text-center>
     <ion-title>
       รายการสินค้า
     </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="ios-basket-outline"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -10,10 +16,10 @@
   <ion-card text-center>
     <ion-card-header style="background-color: #de8300">
       <ion-row>
-        <ion-col col-9>
+        <ion-col col-9 align-self-center>
           <h2>ชื่อสินค้า</h2>
         </ion-col>
-        <ion-col col-3>
+        <ion-col col-3 align-self-center>
           <h2>ราคา/หน่วย</h2>
         </ion-col>
       </ion-row>
@@ -23,10 +29,10 @@
       <form >
         <ion-item *ngFor="let p of product">
           <ion-row>
-            <ion-col col-9>
+            <ion-col col-9 align-self-center (click)="addProductToCart(p.id)">
               {{ p.productName }}
             </ion-col>
-            <ion-col col-3 text-center>
+            <ion-col col-3 text-center align-self-center (click)="addProductToCart(p.id)">
               {{ p.price }}
             </ion-col>
           </ion-row>

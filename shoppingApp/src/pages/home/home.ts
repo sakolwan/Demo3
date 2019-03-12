@@ -1,32 +1,33 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { CallApiProvider } from '../../providers/call-api/call-api';
+import { Component } from "@angular/core";
+import { NavController } from "ionic-angular";
+import { CallApiProvider } from "../../providers/call-api/call-api";
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: "page-home",
+  templateUrl: "home.html"
 })
 export class HomePage {
-  product : any
+  product: any
 
   constructor(public callApi: CallApiProvider, public navCtrl: NavController) {
-
   }
 
   ionViewDidEnter() {
     this.getAll();
   }
 
-  getAll()
-  {
+  getAll() {
     this.callApi.GetAll().subscribe(data => {
       this.product = data;
       //แสดงรายการสินค้า
-    })
+    });
   }
 
-goManagePage()
-{
-  this.navCtrl.push('ManageProductPage');
-}
+  goManagePage() {
+    this.navCtrl.push("ManageProductPage");
+  }
+
+  addProductToCart(id : string) {
+    this.navCtrl.push('InfoAddToCartPage', {id:id});
+  }
 }

@@ -1,0 +1,28 @@
+<!--
+  Generated template for the PutProductPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="blue1">
+    <ion-title>แก้ไขรายการสินค้า</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="newProduct" (ngSubmit)="putProduct()">
+    <ion-item>
+      <ion-label fixed>ชื่อสินค้า : </ion-label>
+      <ion-input formControlName="productName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>ราคา/หน่วย : </ion-label>
+      <ion-input formControlName="price"></ion-input>
+    </ion-item>
+
+    <br>
+    <button ion-button block color="secondary" type="submit" [disabled]="newProduct.invalid">แก้ไข</button>
+  </form>
+</ion-content>

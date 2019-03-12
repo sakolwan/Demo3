@@ -1,0 +1,35 @@
+<!--
+  Generated template for the InfoManagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="blue1" text-center>
+    <ion-title>ข้อมูลสินค้า</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item >
+    <ion-label>ชื่อสินค้า : {{ product.get("productName").value }}</ion-label>
+  </ion-item>
+  <ion-item >
+    <ion-label>ราคา/หน่วย : {{ product.get("price").value }}</ion-label>
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col col-6>
+      <ion-buttons>
+        <button ion-button block color="danger" (click)="deleteProduct(id)">ลบรายการ</button>
+      </ion-buttons>
+    </ion-col>
+    <ion-col col-6>
+      <ion-buttons>
+        <button ion-button block color="secondary" (click)="putProduct()">แก้ไขข้อมูล</button>
+      </ion-buttons>
+    </ion-col>
+  </ion-row>
+</ion-footer>

@@ -21,7 +21,7 @@ export class InfoAddToCartPage {
   productName : string
   price : any
   amount : any
-  // _amount : any
+  _amount : any
   product : FormGroup
   newProduct : FormGroup
 
@@ -34,11 +34,16 @@ export class InfoAddToCartPage {
     })
   }
 
-  ionViewDidEnter() {
+  ionViewDidLoad() {
     console.log('ionViewDidLoad InfoAddToCartPage');
     this.id = this.navParams.get('id');
     this.getProductById();
+
+    // this.productName = this.navParams.get('ProductName');
+    
     console.log(this.id);
+    // console.log(this.product.value);
+    
     // this._id = this.navParams.get('id');
     // this.productName = this.navParams.get('productName');
     // this.price = this.navParams.get('price');
@@ -59,18 +64,18 @@ export class InfoAddToCartPage {
       })
   }
 
-  // postCart() {
-  //   this.newProduct = this.fb.group ({
-  //     'id' : this.id,
-  //     'productName' : this.productName,
-  //     'price' : this.price,
-  //     'amount' : this.amount
-  //   })
-  //   console.log(this.newProduct.value);
+  postCart() {
+    this.newProduct = this.fb.group ({
+      'id' : this.product.get('id'),
+      'productName' : this.product.get('productName'),
+      'price' : this.product.get('price'),
+      'amount' : this._amount
+    })
+    console.log(this.newProduct.value);
     
-  //   // this.callApi.PostCart(this.newProduct.value).subscribe(data => {
-  //   //   console.log(this.newProduct.value);
-  //   // })
-  //   // this.navCtrl.pop();
-  // }
+    this.callApi.PostCart(this.newProduct.value).subscribe(data => {
+      console.log(this.newProduct.value);
+    })
+    this.navCtrl.pop();
+  }
 }

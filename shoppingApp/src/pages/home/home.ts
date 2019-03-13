@@ -30,4 +30,8 @@ export class HomePage {
   addProductToCart(id : string) {
     this.navCtrl.push('InfoAddToCartPage', {id:id});
   }
+
+  goToCart() {
+    this.navCtrl.push('CartPage');
+  }
 }

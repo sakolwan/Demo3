@@ -16,6 +16,7 @@ import { CallApiProvider } from '../../providers/call-api/call-api';
 })
 export class CartPage {
   allCart : any
+  total : any
 
   constructor(public callApi: CallApiProvider, public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -28,6 +29,15 @@ export class CartPage {
   getAllCart() {
     this.callApi.GetAllCart().subscribe(data => {
       this.allCart = data;
+
+      var sum = 0;
+      for (let index = 0; index < this.allCart.length; index++) {
+        sum += (this.allCart[index].price * this.allCart[index].amount)
+      }
+      console.log(sum);
+      this.total = sum;
     })
   }
+
+
 }
